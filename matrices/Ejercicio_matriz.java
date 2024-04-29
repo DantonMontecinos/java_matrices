@@ -25,8 +25,6 @@ public class Ejercicio_matriz {
          for(int i=0;i<4;i++){
              for (int x=0;x<4;x++){
                  numeros[i][x]= (int) (Math.random() * 9);
-                 ;
-
              }
          }
      }
@@ -80,6 +78,19 @@ public class Ejercicio_matriz {
         }
         System.out.println("La suma de la fila es: "+suma);
     }
+    public void promedioTodo(){
+
+        int suma=0;
+        int promedio=0;
+        for(int i=0;i<4;i++){
+            for (int x=0;x<4;x++){
+                suma = suma+numeros[i][x];
+            }
+        }
+        promedio = suma/16;
+        System.out.println("Suma todo: "+suma);
+        System.out.println("El promedio es: "+promedio);
+    }
 
 
 
@@ -90,6 +101,8 @@ public class Ejercicio_matriz {
          e.sumarDiagonalSec();
          System.out.println("Elegir fila que desea sumar: 1, 2, 3 o 4 : ");
          e.sumarFila(2);
+         System.out.println("____________________________________");
+         e.promedioTodo();
 
 
 
